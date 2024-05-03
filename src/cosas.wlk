@@ -1,33 +1,74 @@
-// Como ya sabemos crear objetos y definir algunos métodos simples, 
-// algunos los tenemos parcialmente definidos. Completar todo los demás
-// para satisfacer lo que pide el enunciado.
-
 object heladera {
-	method precio() { return 200000 }
-	method esComida() { return false }
-	method esElectrodomestico() { return true }	
+	method precio() = 200000 
+	method esComida() = false 
+	method esElectrodomestico() = true 	
 }
 
 object cama {
-	method precio() { return 80000 }
-	method esComida() { return false }
-	method esElectrodomestico() { return false }	
+	method precio() = 80000 
+	method esComida() = false 
+	method esElectrodomestico() = false 	
 }
 
 object tiraDeAsado {
-	method precio() { return 3500 }
-	method esComida() { return true }
-	method esElectrodomestico() { return false }	
+	method precio() = 3500 
+	method esComida() = true 
+	method esElectrodomestico() = false 
 }
 
 object paqueteDeFideos {
-	method precio() { return 500 }
-	method esComida() { return true }
-	method esElectrodomestico() { return false }	
+	method precio() = 500 
+	method esComida() = true 
+	method esElectrodomestico() = false 	
 }
 
 object plancha {
-	method precio() { return 12000 }
-	method esComida() { return false }
-	method esElectrodomestico() { return true }	
+	method precio() = 12000 
+	method esComida() = false 
+	method esElectrodomestico() = true 	
+}
+
+object milanesas{
+	method precio() = 2600 
+	method esComida() = true 
+	method esElectrodomestico() = false 	
+}
+
+object botellaSalsaDeTomate{
+	method precio() = 900 
+	method esComida() = true 
+	method esElectrodomestico() = false
+}
+
+object microondas{
+	method precio() = 42000 
+	method esComida() = false 
+	method esElectrodomestico() = true
+}
+
+object cebollas{
+	method precio() = 250 
+	method esComida() = true 
+	method esElectrodomestico() = false
+}
+
+object computadora{
+	method precio() = 500 * dolar.precioVenta()
+	method esComida() = false 
+	method esElectrodomestico() = true
+}
+
+object dolar{
+	method precioVenta() = 1100
+}
+
+object packComida{
+	var plato
+	var aderezo
+	
+	method plato(alimento){ plato = alimento}
+	method aderezo(unAderezo){aderezo = unAderezo}
+	method precio() = plato.precio() + aderezo.precio() 
+	method esComida() = true 
+	method esElectrodomestico() = false
 }
